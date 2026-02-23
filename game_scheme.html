@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Схема выборов — Первый день в кампусе</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, flowchart: { useMaxWidth: true, htmlLabels: true } });
+  </script>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 16px; background: #fafafa; }
+    h1 { font-size: 1.25rem; color: #333; }
+    .mermaid { background: #fff; padding: 20px; border-radius: 8px; overflow: auto; }
+    p { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Схема выборов (по стрелкам)</h1>
+  <p>Редактируй файл <code>game_scheme.mmd</code> — затем обнови эту страницу или открой схему на <a href="https://mermaid.live">mermaid.live</a>.</p>
+  <pre class="mermaid">
+flowchart TB
+    subgraph start[" "]
+        S1["Сцена 1: Ворота в новую жизнь<br/>Университет, адрес общежития Корпус 7"]
+    end
+
+    S1 --> C1["Выбор 1: Налево к стенду<br/>Помощь первокурсникам"]
+    S1 --> C2["Выбор 2: Прямо через аллею<br/>в парк"]
+    S1 --> C3["Выбор 3: Направо самому<br/>карта кампуса"]
+
+    C1 --> C1_1["Зайти в общежитие<br/>найти комнату"]
+    C1 --> C1_2["Догнать Лену,<br/>поблагодарить"]
+    C1 --> C1_3["Остаться у входа,<br/>осмотреться"]
+
+    C1_2 --> C1_2_1["Подготовиться<br/>к вечеринке"]
+    C1_2 --> C1_2_2["Узнать про клуб<br/>и вечеринку"]
+    C1_2_1 --> C1_2_1_1["Одежда строгая"]
+    C1_2_1 --> C1_2_1_2["Одежда свободная"]
+    C1_2_1 --> C1_2_1_3["Остаться в том же"]
+    C1_2_1_1 --> PARTY["Сцена: Вечеринка в клубе"]
+    C1_2_1_2 --> PARTY
+    C1_2_1_3 --> PARTY
+
+    C2 --> C2_1["Найти Алису<br/>в соцсетях"]
+    C2 --> C2_2["Прогулка по кампусу<br/>искать Алису"]
+    C2 --> C2_3["Забыть, обустроиться<br/>в общежитии"]
+    C2_1 --> C2_1_1["Алиса отвечает<br/>приглашение к дубу"]
+    C2_2 --> C2_2_1["Встреча на ступеньках<br/>библиотеки"]
+
+    C3 --> C3_1["Зайти в общежитие"]
+    C3 --> C3_2["Подумать о Соне<br/>встретиться снова"]
+    C3 --> C3_3["Найти соседей"]
+    C3_2 --> C3_2_1["Библиотека,<br/>найти Соню"]
+
+    PARTY --> P1["Ответ: Рад что пришел"]
+    PARTY --> P2["Ответ: Ищу тебя"]
+    PARTY --> P3["Ответ: Впервые на вечеринке"]
+    P1 --> P1_1["Переулок: поцеловать"]
+    P1 --> P1_2["Переулок: спросить куда"]
+    P1 --> P1_3["Переулок: позволить вести"]
+    P2 --> P2_1["Углубить поцелуй"]
+    P2 --> P2_2["Предложить уйти"]
+    P3 --> P3_1["Целовать шею, ухо"]
+    P3 --> P3_2["Уйти в уединенное место"]
+    P3 --> P3_3["Танцевать дальше"]
+
+    style S1 fill:#e1f5fe
+    style C1 fill:#fff3e0
+    style C2 fill:#fff3e0
+    style C3 fill:#fff3e0
+    style PARTY fill:#f3e5f5
+  </pre>
+</body>
+</html>
